@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jun 12, 2023 at 09:24 AM
+- Server version: 10.4.22-MariaDB
+- PHP Version: 8.0.13
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="abc_company" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="booking">
+                CREATE TABLE `booking` (
+                  `bookingId` int(12) NOT NULL,
+                  `customerId` int(15) NOT NULL,
+                  `idHall` int(15) NOT NULL,
+                  `startDate` date NOT NULL,
+                  `endDate` date NOT NULL,
+                  PRIMARY KEY (`bookingId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="customer">
+                CREATE TABLE `customer` (
+                  `customerId` int(15) NOT NULL,
+                  `name` varchar(20) NOT NULL,
+                  `nic` varchar(15) NOT NULL,
+                  `contactNo` varchar(15) NOT NULL,
+                  PRIMARY KEY (`customerId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="employee">
+                CREATE TABLE `employee` (
+                  `username` varchar(15) NOT NULL,
+                  `password` varchar(15) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="hall">
+                CREATE TABLE `hall` (
+                  `idHall` int(15) NOT NULL,
+                  `hallType` varchar(16) NOT NULL,
+                  `hallName` varchar(15) NOT NULL,
+                  `hallPricePerDay` double NOT NULL,
+                  PRIMARY KEY (`idHall`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="payment">
+                CREATE TABLE `payment` (
+                  `paymentId` int(11) NOT NULL,
+                  `BookingId` int(11) NOT NULL,
+                  `TotalPrice` double NOT NULL,
+                  PRIMARY KEY (`paymentId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'abc_company'
+    -->
+    <database name="abc_company">
+        <!-- Table booking -->
+        <table name="booking">
+            <column name="bookingId">1</column>
+            <column name="customerId">1</column>
+            <column name="idHall">1</column>
+            <column name="startDate">2023-05-02</column>
+            <column name="endDate">2023-05-05</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">2</column>
+            <column name="customerId">2</column>
+            <column name="idHall">2</column>
+            <column name="startDate">2023-05-10</column>
+            <column name="endDate">2023-05-13</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">3</column>
+            <column name="customerId">4</column>
+            <column name="idHall">5</column>
+            <column name="startDate">2023-05-03</column>
+            <column name="endDate">2023-05-11</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">4</column>
+            <column name="customerId">3</column>
+            <column name="idHall">4</column>
+            <column name="startDate">2023-05-17</column>
+            <column name="endDate">2023-05-20</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">5</column>
+            <column name="customerId">4</column>
+            <column name="idHall">2</column>
+            <column name="startDate">2023-05-02</column>
+            <column name="endDate">2023-05-04</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">9</column>
+            <column name="customerId">4</column>
+            <column name="idHall">5</column>
+            <column name="startDate">2023-05-03</column>
+            <column name="endDate">2023-05-11</column>
+        </table>
+        <table name="booking">
+            <column name="bookingId">11</column>
+            <column name="customerId">4</column>
+            <column name="idHall">6</column>
+            <column name="startDate">2023-06-20</column>
+            <column name="endDate">2023-06-22</column>
+        </table>
+        <!-- Table customer -->
+        <table name="customer">
+            <column name="customerId">1</column>
+            <column name="name">ruchi</column>
+            <column name="nic">200072356258</column>
+            <column name="contactNo">0715869956</column>
+        </table>
+        <table name="customer">
+            <column name="customerId">2</column>
+            <column name="name">osh</column>
+            <column name="nic">98256345689</column>
+            <column name="contactNo">07125633526</column>
+        </table>
+        <table name="customer">
+            <column name="customerId">3</column>
+            <column name="name">mike</column>
+            <column name="nic">9758630025001</column>
+            <column name="contactNo">0774562358</column>
+        </table>
+        <table name="customer">
+            <column name="customerId">4</column>
+            <column name="name">david</column>
+            <column name="nic">98562356452</column>
+            <column name="contactNo">07158964452</column>
+        </table>
+        <table name="customer">
+            <column name="customerId">5</column>
+            <column name="name">ken</column>
+            <column name="nic">200058623556</column>
+            <column name="contactNo">07125896632</column>
+        </table>
+        <!-- Table employee -->
+        <table name="employee">
+            <column name="username">admin</column>
+            <column name="password">123</column>
+        </table>
+        <!-- Table hall -->
+        <table name="hall">
+            <column name="idHall">1</column>
+            <column name="hallType">Small </column>
+            <column name="hallName">S1</column>
+            <column name="hallPricePerDay">20000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">2</column>
+            <column name="hallType">Small </column>
+            <column name="hallName">S2</column>
+            <column name="hallPricePerDay">20000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">3</column>
+            <column name="hallType">Large</column>
+            <column name="hallName">L1</column>
+            <column name="hallPricePerDay">1000000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">4</column>
+            <column name="hallType">Medium</column>
+            <column name="hallName">M1</column>
+            <column name="hallPricePerDay">50000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">5</column>
+            <column name="hallType">Large</column>
+            <column name="hallName">L2</column>
+            <column name="hallPricePerDay">200000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">6</column>
+            <column name="hallType">Medium</column>
+            <column name="hallName">M2</column>
+            <column name="hallPricePerDay">50000</column>
+        </table>
+        <table name="hall">
+            <column name="idHall">7</column>
+            <column name="hallType">Small </column>
+            <column name="hallName">S3</column>
+            <column name="hallPricePerDay">45000</column>
+        </table>
+        <!-- Table payment -->
+        <table name="payment">
+            <column name="paymentId">1</column>
+            <column name="BookingId">1</column>
+            <column name="TotalPrice">888</column>
+        </table>
+        <table name="payment">
+            <column name="paymentId">2</column>
+            <column name="BookingId">3</column>
+            <column name="TotalPrice">500000</column>
+        </table>
+        <table name="payment">
+            <column name="paymentId">3</column>
+            <column name="BookingId">2</column>
+            <column name="TotalPrice">2000000</column>
+        </table>
+    </database>
+</pma_xml_export>
