@@ -1,6 +1,6 @@
 # hall_booking_application
 
- The hall booking standalone application at ABC Company was implemented using object oriented concepts. It enables administartors to book
+ The hall booking standalone application at ABC Company was implemented using object oriented concepts. It enables administrators to book
  halls, check for hall availability, add customer information, add new halls, and
  handle booking payments.  
 
